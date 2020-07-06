@@ -5,9 +5,9 @@
 //   @include defineColorHSL(--color-primary, 0, 100%, 56%);
 // }
 
-$primary-color: black;
+$primary-color: #fff;
 
-$link-color: blue;
+$link-color: #fff;
 
 $color-white: #ffffff;
 $color-gray: #cccccc;
@@ -15,6 +15,10 @@ $color-black: #000000;
 $color-red: red;
 $color-pink: pink;
 
+$add-color: #09274F;
+$add-color-2: #DDCEBC;
+
 $primary-font: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$font-icomoon: 'icomoon';
 
 $font-source: 'Source Sans Pro', $primary-font;

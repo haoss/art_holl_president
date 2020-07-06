@@ -1,1 +1,24 @@
 /* modules */
+.section {
+  &__bottom {
+    background-color: $add-color;
+    color: rgba($color-white,.7);
+    padding: 50px 30px;
+  }
+  &__content {
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.hashtag {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: rgba($add-color-2,0.5);
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}

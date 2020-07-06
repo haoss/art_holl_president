@@ -14,28 +14,29 @@ html(lang="ru")
 
     include ./_include/_header
 
-    .content
-      .container
+    main.main
+      section.section
+        .section__top
+          div(style="height: 480px; background-color: #ccc")
+        .section__bottom
+          .section__bottom-content
+            .hashtag #АРТ ХОЛ ПРЕЗИДЕНТ
+            .section__head
+              h1 Потрясающее место для проведения выставок
+            .section__content
+              p Особое пространство в Москве, сочетающее в себе характерные черты лофта, арт-галереи и творческой мастерской. 
+              p
+                a(href="#!").btn
+                  span Забронировать арт холл
+              p
+                a(href="tel:")
+                  i.icon-call-border
+                  span 0 800 
+                    b 987 654 321
 
-        h1 Главная 22
 
-        .row
-          .col-md-4 4 collumns
-          .col-md-8 8 collumns
-          .col-md-12 12 collumns
-          .col-md-12 12 collumns
-
-        .row
-          .col-md-12
-
-            button.btn.btn-primary(type="button") Button
-            button.btn.btn-danger(type="button") Button
-            button.btn.btn-custom-color(type="button") Button
-            button.btn.btn-custom-color2(type="button") Button
-
-
-    include ./_include/_footer
-    div(style="height: 1000px; background-color: #000")
+    //- include ./_include/_footer
+    div(style="height: 1000px; background-color: #fff")
 
     // Load Scripts
     include ./_include/_footer-js

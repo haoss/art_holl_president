@@ -19,11 +19,14 @@ html, body {
 body {
   // background-color: alpha(var(--color-primary), 1);
   background: $color-white;
-  font-size: rem(16px);
+  font-size: rem(15px);
   font-family: $font-source;
   color: $primary-color;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
+  &.is-fixed {
+    overflow: hidden;
+  }
 }
 
 //  Typography
@@ -32,17 +35,19 @@ body {
   font-weight: bold;
   text-decoration: none;
   margin: 0 0 15px 0;
+  font-family: $font-source;
 }
 .h1, h1 {
-  font-size: rem(21px);
-  line-height: 1.05;
-  letter-spacing: -1px;
-  margin-bottom: 25px;
+  font-size: rem(35px);
+  line-height: 1;
+  margin-bottom: 17px;
+  letter-spacing: 0;
 }
 .h2, h2 {
-  font-size: rem(18px);
-  line-height: 1.14;
-  margin-bottom: 20px;
+  font-size: rem(35px);
+  line-height: 1;
+  margin-bottom: 17px;
+  letter-spacing: 0;
 }
 .h3, h3 {
   font-size: rem(16px);
@@ -65,7 +70,7 @@ small, .small {
 }
 
 p {
-  line-height: 22px;
+  line-height: 1.35;
   margin: 0 0 20px 0;
 }
 
@@ -95,6 +100,16 @@ a, .link {
     color: $link-color;
     text-decoration: none;
     outline: none;
+  }
+  &[href*="tel:"] {
+    text-decoration: none;
+    color: $color-white;
+    font-size: rem(26px);
+    [class*="icon-"] {
+      font-size: rem(23px);
+      margin-right: 10px;
+      vertical-align: -2px;
+    }
   }
 }
 
@@ -185,7 +200,7 @@ img, .img {
 
 /* section */
 .section {
-  padding: 50px 0;
+  padding: 0;
   min-width: 320px;
 }
 

@@ -1,17 +1,39 @@
 // Header
 header.header
-  .container
-    i.icon-logo
-    i.icon-logo-name
-    
-    -var navigation = { 'Главная': '#', 'О нас': '#', 'Продукция': '#', 'Сотрудничество': '#', 'Наши магазины': '#', 'Контакты': '#'};
-    
-    nav.navigation(role="navigation")
-      ul
-        each val, key in navigation
-          if active === key
-            li.active
-              a(href=val, title=key)= key
-          else
-            li
-              a(href=val, title=key)= key
+  .header__wrapper
+    .logo
+      i.icon-logo
+      i.icon-logo-name
+    button(type="button").header__btn
+      span меню сайта
+      i
+
+-var navigation = { 'Главная': '#!', 'Тарифы': '#!', 'Пространство': '#!', 'Схемы': '#!', 'Заказ': '#!', 'Контакты': '#!'};
+
+nav.navigation(role="navigation")
+  ul
+    each val, key in navigation
+      if active === key
+        li.active
+          a(href=val, title=key)= key
+      else
+        li
+          a(href=val, title=key)= key
+  .navigation__phone
+    a(href="tel:")
+      i.icon-call-border
+      span 0 800 
+        b 987 654 321
+  .navigation__footer
+    button(type="button").btn.navigation__btn
+      span Забронировать арт холл
+    .social
+      span.span Мы в сети
+      a(href="#!" target="_blank")
+        i.icon-facebook
+      a(href="#!" target="_blank")
+        i.icon-twitter
+      a(href="#!" target="_blank")
+        i.icon-vkontakte
+
+.header-holder

@@ -18,45 +18,48 @@
         <!-- Preloader-->
         <!-- Header-->
         <header class="header">
-            <div class="container"><i class="icon-logo"></i><i class="icon-logo-name"></i>
-                <nav class="navigation" role="navigation">
-                    <ul>
-                        <li class="active"><a href="#" title="Главная">Главная</a></li>
-                        <li><a href="#" title="О нас">О нас</a></li>
-                        <li><a href="#" title="Продукция">Продукция</a></li>
-                        <li><a href="#" title="Сотрудничество">Сотрудничество</a></li>
-                        <li><a href="#" title="Наши магазины">Наши магазины</a></li>
-                        <li><a href="#" title="Контакты">Контакты</a></li>
-                    </ul>
-                </nav>
+            <div class="header__wrapper">
+                <div class="logo"><i class="icon-logo"></i><i class="icon-logo-name"></i></div>
+                <button class="header__btn" type="button"><span>меню сайта</span><i></i></button>
             </div>
         </header>
-        <div class="content">
-            <div class="container">
-                <h1>Главная 22</h1>
-                <div class="row">
-                    <div class="col-md-4">4 collumns</div>
-                    <div class="col-md-8">8 collumns</div>
-                    <div class="col-md-12">12 collumns</div>
-                    <div class="col-md-12">12 collumns</div>
+        <nav class="navigation" role="navigation">
+            <ul>
+                <li class="active"><a href="#!" title="Главная">Главная</a></li>
+                <li><a href="#!" title="Тарифы">Тарифы</a></li>
+                <li><a href="#!" title="Пространство">Пространство</a></li>
+                <li><a href="#!" title="Схемы">Схемы</a></li>
+                <li><a href="#!" title="Заказ">Заказ</a></li>
+                <li><a href="#!" title="Контакты">Контакты</a></li>
+            </ul>
+            <div class="navigation__phone"><a href="tel:"><i class="icon-call-border"></i><span>0 800 <b>987 654 321</b></span></a></div>
+            <div class="navigation__footer">
+                <button class="btn navigation__btn" type="button"><span>Забронировать арт холл</span></button>
+                <div class="social"><span class="span">Мы в сети</span><a href="#!" target="_blank"><i class="icon-facebook"></i></a><a href="#!" target="_blank"><i class="icon-twitter"></i></a><a href="#!" target="_blank"><i class="icon-vkontakte"></i></a></div>
+            </div>
+        </nav>
+        <div class="header-holder"></div>
+        <main class="main">
+            <section class="section">
+                <div class="section__top">
+                    <div style="height: 480px; background-color: #ccc"></div>
                 </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <button class="btn btn-primary" type="button">Button</button>
-                        <button class="btn btn-danger" type="button">Button</button>
-                        <button class="btn btn-custom-color" type="button">Button</button>
-                        <button class="btn btn-custom-color2" type="button">Button</button>
+                <div class="section__bottom">
+                    <div class="section__bottom-content">
+                        <div class="hashtag">#АРТ ХОЛ ПРЕЗИДЕНТ</div>
+                        <div class="section__head">
+                            <h1>Потрясающее место для проведения выставок</h1>
+                        </div>
+                        <div class="section__content">
+                            <p>Особое пространство в Москве, сочетающее в себе характерные черты лофта, арт-галереи и творческой мастерской. </p>
+                            <p><a class="btn" href="#!"><span>Забронировать арт холл</span></a></p>
+                            <p><a href="tel:"><i class="icon-call-border"></i><span>0 800 <b>987 654 321</b></span></a></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- Footer-->
-        <footer class="footer">
-            <div class="container">
-                <div>&copy; 2018</div>
-            </div>
-        </footer>
-        <div style="height: 1000px; background-color: #000"></div>
+            </section>
+        </main>
+        <div style="height: 1000px; background-color: #fff"></div>
         <!-- Load Scripts-->
         <!-- Footer js-->
         <script src="./js/libs/jquery/jquery-3.3.1.min.js"></script>

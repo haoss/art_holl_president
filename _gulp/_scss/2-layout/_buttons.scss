@@ -6,3 +6,38 @@ button {
     outline: none;
   }
 }
+
+.btn {
+  display: inline-block;
+  border: 3px solid $color-white;
+  color: $color-white;
+  height: 33px;
+  white-space: nowrap;
+  padding: 5px 20px;
+  position: relative;
+  margin: 5px 0;
+  background: rgba($color-white,0);
+  transition: all 0.35s;
+  font-size: rem(13px);
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  &::before {
+    position: absolute;
+    content: '';
+    top: -8px;
+    right: 7px;
+    bottom: -8px;
+    left: 7px;
+    border: 2px solid $color-white;
+    opacity: 1;
+    transition: all 0.35s;
+  }
+  &:hover {
+    background: rgba($color-white,1);
+    color: $add-color;
+    &::before {
+      opacity: 0;
+    }
+  }
+}

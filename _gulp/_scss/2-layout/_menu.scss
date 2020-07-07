@@ -88,6 +88,7 @@
     width: 50px;
     background: transparent;
     overflow: visible;
+    z-index: 120;
     &__phone, &__footer {
       display: none;
     }
@@ -128,6 +129,27 @@
       }
     }
   }
+  @include media-breakpoint-up(xxl) {
+    width: 60px;
+    ul {
+      li {
+        &>a,&>span {
+          width: 60px;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(xxxl) {
+    width: 80px;
+    ul {
+      font-size: rem(16px);
+      li {
+        &>a,&>span {
+          width: 80px;
+        }
+      }
+    }
+  }
 }
 
 .social {
@@ -148,5 +170,8 @@
   }
   .span {
     font-weight: bold;
+  }
+  @include media-breakpoint-up(xxl) {
+    font-size: rem(16px);
   }
 }

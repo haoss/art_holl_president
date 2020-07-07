@@ -15,6 +15,8 @@ html(lang="ru")
     include ./_include/_header
 
     main.main
+
+      // Section 1
       section.section
         .section__top
           .one-carousel.carousel
@@ -30,9 +32,10 @@ html(lang="ru")
             div
               .carousel__block
                 img(src="./tmp/section-1-img.png", alt="")
-        .section__bottom
+        .section__bottom(data-text="АРТ ХОЛЛ")
           .section__bottom-content
-            .hashtag #АРТ ХОЛ ПРЕЗИДЕНТ
+            .hashtag
+              span #АРТ ХОЛ ПРЕЗИДЕНТ
             .section__head
               h1 Потрясающее место для проведения выставок
             .section__content
@@ -42,7 +45,7 @@ html(lang="ru")
                 div
                   a(href="#!").btn
                     span Забронировать арт холл
-                div.d-none.d-md-block.d-lg-none
+                div.d-none.d-md-block.d-lg-none.d-xl-block
                   .section-one__small или 
                     br
                     | звоните
@@ -52,8 +55,87 @@ html(lang="ru")
                     span 0 800 
                       b 987 654 321
 
+      // Section 2
+      section.section
+        .section__top
+          p section 2
+        .section__bottom(data-text="ТАРИФЫ")
+          .section__bottom-content
+            .hashtag
+              span #АРТ ХОЛ ПРЕЗИДЕНТ
+              span #ТАРИФЫ АРТ ХОЛ
+            .section__head
+              .h1 Индивидуальный подход к каждому клиенту
+            .section__content
+              p Цены на услуги за проведение выставочного проекта:
+                br
+                | 14 дней - 
+                b 50 000 руб
+                br
+                | 30 дней - 
+                b 90 000 руб
 
-    //- include ./_include/_footer
+      // Section 3
+      section.section
+        .section__top
+          p section 3
+        .section__bottom(data-text="размещение" data-size="140")
+          .section__bottom-content
+            .hashtag
+              span #АРТ ХОЛ ПРЕЗИДЕНТ
+              span #экспозиции
+            .section__head
+              .h1 Индивидуальный выбор трансформации помещения
+
+      // Section 4
+      section.section
+        .section__top
+          p section 4
+        .section__bottom(data-text="ПОМЕЩЕНИЕ" data-size="147")
+          .section__bottom-content
+            .hashtag
+              span #АРТ ХОЛ ПРЕЗИДЕНТ
+              span #экспозиции
+            .section__head
+              .h1 Уникальный формат возможностей помещения
+
+      // Section 5
+      section.section
+        .section__top
+          p section 5
+        .section__bottom(data-text="ОСНАЩЕНИЕ" data-size="143")
+          .section__bottom-content
+            .hashtag
+              span #АРТ ХОЛ ПРЕЗИДЕНТ
+              span #экспозиции
+            .section__head
+              .h1 Уникальный формат оснащения помещения
+
+      // Section 6
+      section.section
+        .section__top
+          p section 6
+        .section__bottom(data-text="бронирование" data-size="128")
+          .section__bottom-content
+            .hashtag
+              span #АРТ ХОЛ ПРЕЗИДЕНТ
+              span #экспозиции
+            .section__head
+              .h1 Индивидуальный подход к вашей трансформации мероприятия
+
+      // Section 7
+      section.section
+        .section__top
+          p section 7
+        .section__bottom(data-text="НАВИГАЦИЯ" data-size="143")
+          .section__bottom-content
+            .hashtag
+              span #АРТ ХОЛ ПРЕЗИДЕНТ
+              span #экспозиции
+            .section__head
+              .h1 Наши контакты и схема проезда
+
+    include ./_include/_footer
     div(style="height: 1000px; background-color: #fff")
 
     // Load Scripts

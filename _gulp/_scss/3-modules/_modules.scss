@@ -2,6 +2,9 @@
 .section {
   position: relative;
   overflow: hidden;
+  &__top {
+    // background: rgba($color-black,.1);
+  }
   &__bottom {
     background-color: $add-color;
     color: rgba($color-white,.7);
@@ -41,34 +44,98 @@
       align-items: center;
       padding-left: 53px;
       padding-right: 50px;
+      overflow: hidden;
+      z-index: 5;
+      &::before {
+        content: attr(data-text);
+        position: absolute;
+        font-weight: 900;
+        font-size: 185px;
+        line-height: 85px;
+        letter-spacing: -0.08em;
+        color: $color-white;
+        opacity: 0.03;
+        white-space: nowrap;
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+        transform-origin: center center;
+        line-height: 0.7;
+        right: 0;
+        bottom: 0;
+        text-transform: uppercase;
+      }
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    &__content {
+      p {
+        max-width: 455px;
+      }
+    }
+  }
+  @include media-breakpoint-up(xxl) {
+    &__bottom {
+      &::before {
+        font-size: rem(230px);
+      }
+    }
+    &__content {
+      p {
+        max-width: 560px;
+      }
+    }
+  }
+  @include media-breakpoint-up(xxxl) {
+    &__bottom {
+      &::before {
+        font-size: rem(270px);
+      }
+    }
+    &__content {
+      p {
+        max-width: 780px;
+      }
     }
   }
 }
 
 .hashtag {
   font-weight: bold;
-  font-size: 12px;
   line-height: 15px;
   color: rgba($add-color-2,0.5);
   text-transform: uppercase;
   margin-bottom: 7px;
+  font-size: rem(0px);
+  &>span {
+    display: inline-block;
+    font-size: rem(12px);
+    &+span {
+      margin-left: 10px;
+    }
+  }
   @include media-breakpoint-up(md) {
     margin-bottom: 9px;
   }
   @include media-breakpoint-up(xl) {
     margin-bottom: 5px;
-    font-size: rem(14px);
     line-height: 18px;
+    span {
+      font-size: rem(14px);
+    }
   }
   @include media-breakpoint-up(xxl) {
     margin-bottom: 9px;
-    font-size: rem(16px);
     line-height: 20px;
+    span {
+      font-size: rem(16px);
+    }
   }
   @include media-breakpoint-up(xxxl) {
     margin-bottom: 11px;
-    font-size: rem(18px);
     line-height: 23px;
+    span {
+      font-size: rem(18px);
+    }
   }
 }
 
@@ -112,6 +179,10 @@
       margin-top: -5px;
       top: 0;
       right: 9px;
+      transition: all 0.35s;
+    }
+    &:hover {
+      opacity: 1;
     }
   }
   .slick-next {
@@ -119,6 +190,13 @@
     &::before {
       content: '\e90f';
     }
+    // &:hover {
+    //   &:not(.slick-disabled) {
+    //     &::after {
+    //       right: -5px;
+    //     }
+    //   }
+    // }
   }
   .slick-prev {
     left: 30px;
@@ -132,6 +210,9 @@
   }
   .slick-disabled {
     opacity: 0.1;
+    &:hover {
+      opacity: 0.1;
+    }
   }
   @include media-breakpoint-up(lg) {
     height: 100%;
@@ -152,13 +233,62 @@
       }
     }
     .slick-prev {
+      left: 62px;
       &::after {
         right: auto;
         left: 6px;
       }
     }
     .slick-next {
-      right: 65px;
+      right: 112px;
+    }
+  }
+  @include media-breakpoint-up(xxl) {
+    .slick-arrow {
+      width: 29px;
+      height: 29px;
+      &::before {
+        font-size: rem(7px);
+      }
+      &::after {
+        width: 37px;
+        height: 37px;
+        margin-top: -4px;
+        right: 8px;
+      }
+    }
+    .slick-prev {
+      left: 80px;
+      &::after {
+        left: 8px;
+      }
+    }
+    .slick-next {
+      right: 140px;
+    }
+  }
+  @include media-breakpoint-up(xxxl) {
+    .slick-arrow {
+      width: 35px;
+      height: 35px;
+      &::before {
+        font-size: rem(14px);
+      }
+      &::after {
+        width: 45px;
+        height: 45px;
+        margin-top: -5px;
+        right: 10px;
+      }
+    }
+    .slick-prev {
+      left: 96px;
+      &::after {
+        left: 10px;
+      }
+    }
+    .slick-next {
+      right: 130px;
     }
   }
 }
@@ -169,6 +299,9 @@
       &+div {
         margin-top: 20px;
       }
+    }
+    [href*="tel:"] {
+      white-space: nowrap;
     }
   }
   &__small {
@@ -200,6 +333,49 @@
           margin-left: 0px;
         }
       }
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    &__btns {
+      display: flex;
+      align-items: center;
+      &>div {
+        &+div {
+          margin-top: 0px;
+          margin-left: 17px;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(xxl) {
+    &__btns {
+      .btn {
+        font-size: rem(16px);
+        height: 41px;
+        padding-top: 8px;
+      }
+      [href*="tel:"] {
+        font-size: rem(28px);
+        [class*=icon-] {
+          font-size: rem(28px);
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(xxxl) {
+    &__btns {
+      .btn {
+        font-size: rem(18px);
+        height: 50px;
+      }
+      [href*="tel:"] {
+        [class*=icon-] {
+          font-size: rem(30px);
+        }
+      }
+    }
+    &__small {
+      font-size: rem(10px);
     }
   }
 }

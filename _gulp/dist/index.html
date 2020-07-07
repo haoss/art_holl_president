@@ -42,7 +42,20 @@
         <main class="main">
             <section class="section">
                 <div class="section__top">
-                    <div style="height: 480px; background-color: #ccc"></div>
+                    <div class="one-carousel carousel">
+                        <div>
+                            <div class="carousel__block"><img src="./tmp/section-1-img.png" alt=""></div>
+                        </div>
+                        <div>
+                            <div class="carousel__block"><img src="./tmp/section-1-img.png" alt=""></div>
+                        </div>
+                        <div>
+                            <div class="carousel__block"><img src="./tmp/section-1-img.png" alt=""></div>
+                        </div>
+                        <div>
+                            <div class="carousel__block"><img src="./tmp/section-1-img.png" alt=""></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="section__bottom">
                     <div class="section__bottom-content">
@@ -52,8 +65,13 @@
                         </div>
                         <div class="section__content">
                             <p>Особое пространство в Москве, сочетающее в себе характерные черты лофта, арт-галереи и творческой мастерской. </p>
-                            <p><a class="btn" href="#!"><span>Забронировать арт холл</span></a></p>
-                            <p><a href="tel:"><i class="icon-call-border"></i><span>0 800 <b>987 654 321</b></span></a></p>
+                            <div class="section-one__btns">
+                                <div><a class="btn" href="#!"><span>Забронировать арт холл</span></a></div>
+                                <div class="d-none d-md-block d-lg-none">
+                                    <div class="section-one__small">или <br>звоните</div>
+                                </div>
+                                <div><a href="tel:"><i class="icon-call-border"></i><span>0 800 <b>987 654 321</b></span></a></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -65,6 +83,7 @@
         <script src="./js/libs/jquery/jquery-3.3.1.min.js"></script>
         <script src="./js/libs/jquery/jquery-migrate-3.0.1.min.js"></script>
         <script src="./js/libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="./js/libs/slick/slick.min.js"></script>
         <script src="./js/common.js"></script>
     </body>
 </html>

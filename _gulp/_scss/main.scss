@@ -71,6 +71,8 @@ $theme-colors: (
 @import "2-layout/_footer.scss";
 
 @import "../dist/js/libs/magnific-popup/magnific-popup.scss";
+@import "../dist/js/libs/slick/slick.scss";
+@import "../dist/js/libs/slick/slick-theme.scss";
 @import "3-modules/_modules.scss";
 
 @import "4-utils/_clear.scss";

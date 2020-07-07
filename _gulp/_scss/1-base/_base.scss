@@ -42,12 +42,46 @@ body {
   line-height: 1;
   margin-bottom: 17px;
   letter-spacing: 0;
+  @include media-breakpoint-up(md) {
+    font-size: rem(40px);
+    margin-bottom: 21px;
+  }
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 30px;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: rem(50px);
+  }
+  @include media-breakpoint-up(xxl) {
+    font-size: rem(65px);
+  }
+  @include media-breakpoint-up(xxxl) {
+    font-size: rem(80px);
+    line-height: 0.9;
+  }
 }
 .h2, h2 {
   font-size: rem(35px);
   line-height: 1;
   margin-bottom: 17px;
   letter-spacing: 0;
+  @include media-breakpoint-up(md) {
+    font-size: rem(40px);
+    margin-bottom: 21px;
+  }
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 30px;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: rem(50px);
+  }
+  @include media-breakpoint-up(xxl) {
+    font-size: rem(65px);
+  }
+  @include media-breakpoint-up(xxxl) {
+    font-size: rem(80px);
+    line-height: 0.9;
+  }
 }
 .h3, h3 {
   font-size: rem(16px);
@@ -71,7 +105,10 @@ small, .small {
 
 p {
   line-height: 1.35;
-  margin: 0 0 20px 0;
+  margin: 0 0 25px 0;
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 38px;
+  }
 }
 
 em, i, .em, .i {

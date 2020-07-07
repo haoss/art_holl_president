@@ -55,7 +55,19 @@
     padding: 0 60px;
   }
   @include media-breakpoint-up(lg) {
-    padding: 0 53px;
+    padding: 0;
+    box-shadow: none;
+    background: transparent;
+    &-holder {
+      display: none;
+    }
+    &__wrapper {
+      display: block;
+      height: 0;
+    }
+    &__btn {
+      display: none;
+    }
   }
 }
 
@@ -71,5 +83,18 @@
     color: $add-color-2;
     position: relative;
     top: 2px;
+  }
+  @include media-breakpoint-up(lg) {
+    display: block;
+    margin-top: 45px;
+    margin-left: 54px;
+    [class*="logo"] {
+      display: block;
+    }
+    [class*="name"] {
+      display: block;
+      top: auto;
+      margin: 13px 0 0 0;
+    }
   }
 }

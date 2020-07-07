@@ -17,7 +17,19 @@ html(lang="ru")
     main.main
       section.section
         .section__top
-          div(style="height: 480px; background-color: #ccc")
+          .one-carousel.carousel
+            div
+              .carousel__block
+                img(src="./tmp/section-1-img.png", alt="")
+            div
+              .carousel__block
+                img(src="./tmp/section-1-img.png", alt="")
+            div
+              .carousel__block
+                img(src="./tmp/section-1-img.png", alt="")
+            div
+              .carousel__block
+                img(src="./tmp/section-1-img.png", alt="")
         .section__bottom
           .section__bottom-content
             .hashtag #АРТ ХОЛ ПРЕЗИДЕНТ
@@ -25,14 +37,20 @@ html(lang="ru")
               h1 Потрясающее место для проведения выставок
             .section__content
               p Особое пространство в Москве, сочетающее в себе характерные черты лофта, арт-галереи и творческой мастерской. 
-              p
-                a(href="#!").btn
-                  span Забронировать арт холл
-              p
-                a(href="tel:")
-                  i.icon-call-border
-                  span 0 800 
-                    b 987 654 321
+              
+              .section-one__btns
+                div
+                  a(href="#!").btn
+                    span Забронировать арт холл
+                div.d-none.d-md-block.d-lg-none
+                  .section-one__small или 
+                    br
+                    | звоните
+                div
+                  a(href="tel:")
+                    i.icon-call-border
+                    span 0 800 
+                      b 987 654 321
 
 
     //- include ./_include/_footer

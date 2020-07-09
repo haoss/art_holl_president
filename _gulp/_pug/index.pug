@@ -220,14 +220,25 @@ html(lang="ru")
           .section-five
             h3 В состав технического райдера Системы входит следующее оборудование:
             .section-five__row
-              .col-12.col-sm-6
-                .section-five__block
-                  i.icon-system-1
-                  p Подсистема отображения видео и презентаций
+              .section-five__block
+                i.icon-system-1
+                p Подсистема отображения видео и презентаций
+              .section-five__block
+                i.icon-system-2
+                p Подсистема фонового озвучивания
+              .section-five__block
+                i.icon-system-3
+                p Подсистема управления аудио
+              .section-five__block
+                i.icon-system-4
+                p Подсистема управления видео
+              .section-five__block
+                i.icon-system-5
+                p Подсистема звукоусиления
             p Используем оборудование известных и качественных производителей, а именно Barco CSE-200, NEC P554U, Yamaha STAGEPAS 600BT, Yamaha DXS15mkII, Shure SM58S и многое другое. Полный список и характеристики можете изучить в нашей брошюре.
-            p
-              a(href="#!").btn.btn--dark
-                span скачать материалы
+            .clear
+            a(href="#!").btn.btn--dark
+              span скачать материалы
         .section__bottom(data-text="ОСНАЩЕНИЕ")
           .section__bottom-content
             .hashtag
@@ -253,7 +264,82 @@ html(lang="ru")
       // Section 6
       section.section.--six
         .section__top
-          p section 6
+          .section-six(style="background-image: url('./tmp/section-6-img.png');")
+            form(action="").section-six__form
+              legend Форма бронирования
+              fieldset
+                .form-group
+                  +field-text({
+                    title: 'Желаемая дата',
+                    hasJs: true,
+                    isTextarea: false,
+                    hasError: false,
+                    helpText: '',
+                    mods: 'has-icon',
+                    val: '',
+                    attrs: {
+                      name: 'input-date',
+                      placeholder: '',
+                    }
+                  })()
+                    i.icon-calendar
+                .form-group
+                  +field-text({
+                    title: 'Ваше имя',
+                    hasJs: true,
+                    isTextarea: false,
+                    hasError: true,
+                    helpText: '',
+                    mods: 'has-icon',
+                    val: 'Иванов Иван Иванович 007',
+                    attrs: {
+                      name: 'input-name',
+                      placeholder: '',
+                    }
+                  })()
+                    i.icon-user
+                .form-group
+                  +field-text({
+                    title: 'Ваш телефон',
+                    hasJs: true,
+                    isTextarea: false,
+                    hasError: false,
+                    helpText: '',
+                    mods: 'has-icon',
+                    val: '',
+                    attrs: {
+                      name: 'input-phone',
+                      placeholder: '',
+                    }
+                  })()
+                    i.icon-call
+                .form-group.section-six__message
+                  +field-text({
+                    title: 'Ваш комментарий',
+                    hasJs: true,
+                    isTextarea: true,
+                    hasError: false,
+                    helpText: '',
+                    mods: 'has-icon',
+                    val: '',
+                    attrs: {
+                      name: 'input-message',
+                      placeholder: '',
+                      rows: '1'
+                    }
+                  })()
+                    i.icon-message
+                .form-group.section-six__checkbox
+                  +field-checkbox({
+                    title: 'Даю свое соглагасие на обработку персональных данных. Соглашаюсь с правилами <a href="#!" target="_blank">пользовательского соглашения</a> об использовании персональных данных.',
+                    isLink: false,
+                    mods: '',
+                    attrs: {
+                      name: 'input-checkbox',
+                      checked: true,
+                    }
+                  })
+                button(type="submit").btn забронировать
         .section__bottom(data-text="бронирование")
           .section__bottom-content
             .hashtag
@@ -279,7 +365,7 @@ html(lang="ru")
       // Section 7
       section.section.--seven
         .section__top
-          p section 7
+          .section-seven
         .section__bottom(data-text="НАВИГАЦИЯ")
           .section__bottom-content
             .hashtag
@@ -287,7 +373,14 @@ html(lang="ru")
               span #экспозиции
             .section__head
               .h1 Наши контакты и схема проезда
-            
+            .section__content
+              h4 АВТОМОБИЛЬ
+              p| В зависимости от маршрута и загрузки дорог вы можете приехать в АРТ ХОЛ по одному из трёх шоссе: Киевскому (обычно наиболее быстрый маршрут), Боровскому и Минскому.
+              h4 АЭРОЭКСПРЕСС
+              p Проезд до станции метро «Киевская». Время в пути от Киевского вокзала до аэропорта — примерно 35 минут.
+              h4 АВТОБУС
+              p Проезд до станции метро «Юго-Западная». Городские автобусы № 611, 911.
+
             .section__btns.d-none.d-lg-block
               div
                 a(href="#!").btn

@@ -65,6 +65,7 @@ $(document).on('ready', function(){
   });
 
   mobileNav();
+  inputFocus();
 
   // Chrome Smooth Scroll
   try {
@@ -82,13 +83,23 @@ $(window).on('load', function() {
 });
 
 $(window).on('scroll', function() { });
-$(window).on('resize', function() { });
+$(window).on('resize', function() {
+  var width = $(window).width();
+  var btn = $('.header__btn');
+  var body = $('body');
+  var nav = $('.navigation');
+
+  if (width >= 970) {
+    _this.removeClass('is-active');
+    nav.removeClass('is-active');
+    body.removeClass('is-fixed');
+  }
+});
 
 function mobileNav() {
   var btn = $('.header__btn');
   var body = $('body');
   var nav = $('.navigation');
-  var header = $('.header');
 
   btn.on('click', function(){
     var _this = $(this);
@@ -102,6 +113,37 @@ function mobileNav() {
       body.addClass('is-fixed');
     }
   });
+}
 
-  
+function inputFocus(){
+  var jinput = $(".css-input");
+
+  jinput.each(function(){
+    var _this = $(this);
+    var val = _this.val();
+    var field = _this.parents('.j-field-text');
+
+    if (val.length > 0 && _this.is('input') || val.length > 0 && _this.is('textarea')) {
+      field.addClass("active-full");
+    } else {
+      field.removeClass("active-full");
+    }
+
+    // input on focus
+    _this.focus(function () {
+      field.addClass("active");
+    }).blur(function () {
+      field.removeClass("active");
+    })
+
+    _this.on('change', function () {
+      var val = _this.val();
+
+      if (val == '') {
+        field.removeClass("active-full");
+      } else {
+        field.addClass("active-full");
+      }
+    });
+  })
 }

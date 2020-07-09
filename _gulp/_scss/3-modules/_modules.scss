@@ -4,7 +4,9 @@
   position: relative;
   overflow: hidden;
   &__top {
-    // background: rgba($color-black,.1);
+    .--five & {
+      background: $color-white;
+    }
   }
   &__bottom {
     background-color: $add-color;
@@ -627,4 +629,104 @@
       }
     }
   }
+}
+
+.section-five {
+  padding: 45px 30px;
+  background: rgba(#DDCEBC,.4);
+  color: $add-color;
+  font-weight: 600;
+  font-size: rem(14px);
+  &__row {
+    margin: 0 -10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__block {
+    width: calc(50% - 20px);
+    font-size: rem(14px);
+    font-weight: 400;
+    margin: 0 10px 25px 10px;
+    position: relative;
+    padding-left: 80px;
+    min-height: 54px;
+    p {
+      margin-bottom: 0;
+    }
+    [class*="icon-"] {
+      position: absolute;
+      font-size: rem(45px);
+      left: 3px;
+      top: 0;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      left: -10px;
+      top: 20px;
+      width: 35px;
+      height: 35px;
+      background: $color-white;
+    }
+  }
+  h3, .h3 {
+    font-weight: bold;
+    color: $add-color;
+    margin-bottom: 20px;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: rem(15px);
+    &__block {
+      font-size: rem(14px);
+    }
+  }
+  @include media-breakpoint-up(xxl) {
+    &__block {
+      font-size: rem(16px);
+    }
+  }
+  @include media-breakpoint-up(xxxl) {
+    font-size: rem(16px);
+    &__block {
+      font-size: rem(17px);
+    }
+  }
+}
+
+.section-six {
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 42px 33px;
+  &::before {
+    z-index: 1;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $add-color;
+    opacity: .6;
+  }
+  &__form {
+    position: relative;
+    z-index: 5;
+    legend {
+      color: $color-white
+    }
+  }
+  &__checkbox {
+    margin-bottom: 12px;
+  }
+  &__message {
+    margin-bottom: 25px;
+  }
+}
+
+.section-seven {
+  background: $color-white;
+  color: $add-color;
+  min-height: 100px;
 }

@@ -17,7 +17,7 @@ html(lang="ru")
     main.main
 
       // Section 1
-      section.section
+      section.section.--one
         .section__top
           .one-carousel.carousel
             div
@@ -32,7 +32,7 @@ html(lang="ru")
             div
               .carousel__block
                 img(src="./tmp/section-1-img.png", alt="")
-        .section__bottom(data-text="АРТ ХОЛЛ" data-count="1")
+        .section__bottom(data-text="АРТ ХОЛЛ")
           .section__bottom-content
             .hashtag
               span #АРТ ХОЛ ПРЕЗИДЕНТ
@@ -56,7 +56,7 @@ html(lang="ru")
                     b 987 654 321
 
       // Section 2
-      section.section
+      section.section.--two
         .section__top
           .section-two(style="background-image: url('./tmp/section-2-img.png');")
             .section-two__content
@@ -77,7 +77,7 @@ html(lang="ru")
               small Минимальная сумма 
               b 3000 
                 .small руб
-        .section__bottom(data-text="ТАРИФЫ" data-count="2")
+        .section__bottom(data-text="ТАРИФЫ")
           .section__bottom-content
             .hashtag
               span #АРТ ХОЛ ПРЕЗИДЕНТ
@@ -108,7 +108,7 @@ html(lang="ru")
                     b 987 654 321
 
       // Section 3
-      section.section
+      section.section.--three
         .section__top
           .one-carousel.carousel
             div
@@ -125,7 +125,7 @@ html(lang="ru")
             div
               .carousel__block
                 img(src="./tmp/section-1-img.png", alt="")
-        .section__bottom(data-text="размещение" data-count="3")
+        .section__bottom(data-text="размещение")
           .section__bottom-content
             .hashtag
               span #АРТ ХОЛ ПРЕЗИДЕНТ
@@ -148,7 +148,7 @@ html(lang="ru")
                     b 987 654 321
 
       // Section 4
-      section.section
+      section.section.--four
         .section__top
           .section-four
             .section-four__img
@@ -192,7 +192,7 @@ html(lang="ru")
                     .p Общая площадь выставки
                     b 378.20 м
                       sup 2
-        .section__bottom(data-text="ПОМЕЩЕНИЕ" data-count="4")
+        .section__bottom(data-text="ПОМЕЩЕНИЕ")
           .section__bottom-content
             .hashtag
               span #АРТ ХОЛ ПРЕЗИДЕНТ
@@ -215,10 +215,20 @@ html(lang="ru")
                     b 987 654 321
 
       // Section 5
-      section.section
+      section.section.--five
         .section__top
-          p section 5
-        .section__bottom(data-text="ОСНАЩЕНИЕ" data-count="5")
+          .section-five
+            h3 В состав технического райдера Системы входит следующее оборудование:
+            .section-five__row
+              .col-12.col-sm-6
+                .section-five__block
+                  i.icon-system-1
+                  p Подсистема отображения видео и презентаций
+            p Используем оборудование известных и качественных производителей, а именно Barco CSE-200, NEC P554U, Yamaha STAGEPAS 600BT, Yamaha DXS15mkII, Shure SM58S и многое другое. Полный список и характеристики можете изучить в нашей брошюре.
+            p
+              a(href="#!").btn.btn--dark
+                span скачать материалы
+        .section__bottom(data-text="ОСНАЩЕНИЕ")
           .section__bottom-content
             .hashtag
               span #АРТ ХОЛ ПРЕЗИДЕНТ
@@ -241,10 +251,10 @@ html(lang="ru")
                     b 987 654 321
 
       // Section 6
-      section.section
+      section.section.--six
         .section__top
           p section 6
-        .section__bottom(data-text="бронирование" data-count="6")
+        .section__bottom(data-text="бронирование")
           .section__bottom-content
             .hashtag
               span #АРТ ХОЛ ПРЕЗИДЕНТ
@@ -267,10 +277,10 @@ html(lang="ru")
                     b 987 654 321
 
       // Section 7
-      section.section
+      section.section.--seven
         .section__top
           p section 7
-        .section__bottom(data-text="НАВИГАЦИЯ" data-count="7")
+        .section__bottom(data-text="НАВИГАЦИЯ")
           .section__bottom-content
             .hashtag
               span #АРТ ХОЛ ПРЕЗИДЕНТ

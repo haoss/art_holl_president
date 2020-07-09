@@ -1,5 +1,6 @@
 /* modules */
 .section {
+  $this: &;
   position: relative;
   overflow: hidden;
   &__top {
@@ -101,36 +102,6 @@
         bottom: 0;
         text-transform: uppercase;
       }
-      &[data-count="3"] {
-        &::before {
-          font-size: rem(133px);
-          letter-spacing: -0.14em;
-        }
-      }
-      &[data-count="4"] {
-        &::before {
-          font-size: rem(138px);
-          letter-spacing: -0.14em;
-        }
-      }
-      &[data-count="5"] {
-        &::before {
-          font-size: rem(143px);
-          letter-spacing: -0.1em;
-        }
-      }
-      &[data-count="6"] {
-        &::before {
-          font-size: rem(128px);
-          letter-spacing: -0.18em;
-        }
-      }
-      &[data-count="7"] {
-        &::before {
-          font-size: rem(143px);
-          letter-spacing: -0.05em;
-        }
-      }
     }
     &__btns {
       display: block;
@@ -139,6 +110,56 @@
         &+div {
           margin-top: 16px;
           margin-left: 0px;
+        }
+      }
+    }
+    &.--three {
+      #{$this} {
+        &__bottom {
+          &::before {
+            font-size: rem(133px);
+            letter-spacing: -0.14em;
+          }
+        }
+      }
+    }
+    &.--four {
+      #{$this} {
+        &__bottom {
+          &::before {
+            font-size: rem(138px);
+            letter-spacing: -0.14em;
+          }
+        }
+      }
+    }
+    &.--five {
+      #{$this} {
+        &__bottom {
+          &::before {
+            font-size: rem(143px);
+            letter-spacing: -0.1em;
+          }
+        }
+      }
+    }
+    &.--six {
+      #{$this} {
+        &__bottom {
+          &::before {
+            font-size: rem(128px);
+            letter-spacing: -0.18em;
+          }
+        }
+      }
+    }
+    &.--seven {
+      #{$this} {
+        &__bottom {
+          &::before {
+            font-size: rem(143px);
+            letter-spacing: -0.05em;
+          }
         }
       }
     }

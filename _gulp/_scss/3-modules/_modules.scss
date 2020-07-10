@@ -210,6 +210,9 @@
         }
       }
     }
+    &.--seven {
+      font-size: rem(14px);
+    }
   }
   @include media-breakpoint-up(xxxl) {
     &__bottom {
@@ -448,6 +451,9 @@
     .slick-next {
       right: 130px;
     }
+    &__text {
+      margin-right: 80px;
+    }
   }
 }
 
@@ -568,6 +574,9 @@
     }
   }
   @include media-breakpoint-up(xxl) {
+    padding-right: 80px;
+    padding-top: 60px;
+    padding-left: 90px;
     &__content {
       font-size: rem(18px);
     }
@@ -582,6 +591,7 @@
     }
   }
   @include media-breakpoint-up(xxxl) {
+    padding-right: 90px;
     &__content {
       font-size: rem(20px);
     }
@@ -722,12 +732,35 @@
   @include media-breakpoint-up(xxl) {
     padding-right: 70px;
     &__content {
+      font-size: rem(15px);
       .btn {
         width: 208px;
         height: 41px;
         font-size: rem(16px);
       }
+      &>div {
+        &+div {
+          margin-left: 55px;
+        }
+      }
     }
+    &__img {
+      margin-bottom: 10px;
+    }
+    &__price {
+      display: flex;
+      align-items: center;
+      .p {
+        width: 110px;
+        margin-right: 10px;
+      }
+      b {
+        font-size: rem(38px);
+      }
+    }
+  }
+  @include media-breakpoint-up(xxxl) {
+    padding-right: 90px;
   }
 }
 
@@ -813,14 +846,43 @@
     }
   }
   @include media-breakpoint-up(xxl) {
+    padding-right: 70px;
+    h3, .h3 {
+      margin-bottom: 25px;
+    }
     &__block {
       font-size: rem(16px);
+      [class*=icon-] {
+        font-size: rem(55px);
+      }
+      &::before {
+        width: 45px;
+        height: 45px;
+      }
+    }
+    &__content {
+      max-width: 595px;
+      .btn {
+        width: 208px;
+        height: 41px;
+        font-size: rem(16px);
+      }
     }
   }
   @include media-breakpoint-up(xxxl) {
+    padding-top: 70px;
+    padding-left: 85px;
+    padding-right: 90px;
     font-size: rem(16px);
     &__block {
       font-size: rem(17px);
+      [class*=icon-] {
+        font-size: rem(67px);
+      }
+      &::before {
+        width: 63px;
+        height: 63px;
+      }
     }
   }
 }
@@ -873,7 +935,18 @@
       }
     }
   }
-  // @include media-breakpoint-up(xl) {}
+  @include media-breakpoint-up(xxl) {
+    padding-left: 76px;
+    padding-right: 130px;
+    &__form {
+      width: 100%;
+      .btn {
+        width: 208px;
+        height: 41px;
+        font-size: rem(16px);
+      }
+    }
+  }
 }
 
 .section-seven {

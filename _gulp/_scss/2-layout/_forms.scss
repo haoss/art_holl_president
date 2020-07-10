@@ -101,6 +101,12 @@ legend {
   @include media-breakpoint-up(xl) {
     font-size: rem(40px);
   }
+  @include media-breakpoint-up(xxl) {
+    font-size: rem(50px);
+  }
+  @include media-breakpoint-up(xxxl) {
+    font-size: rem(60px);
+  }
 }
 
 .field-text {
@@ -325,6 +331,12 @@ legend {
       }
     }
   }
+
+  @include media-breakpoint-up(xxl) {
+    &__name {
+      font-size: rem(13px);
+    }
+  }
 }
 
 textarea.field-text__input {
@@ -498,6 +510,12 @@ textarea.field-text__input {
           cursor: default;
         }
       }
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    .field-checkbox__label {
+      font-size: rem(14px);
     }
   }
 }

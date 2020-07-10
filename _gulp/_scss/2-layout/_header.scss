@@ -42,12 +42,22 @@
         content: '\e90d';
       }
     }
+    span {
+      display: none;
+    }
     &.is-active {
       i {
         &::before {
           font-size: rem(24px);
           content: '\e90b';
         }
+      }
+    }
+  }
+  @include media-breakpoint-up(sm) {
+    &__btn {
+      span {
+        display: inline-block;
       }
     }
   }
@@ -58,6 +68,7 @@
     padding: 0;
     box-shadow: none;
     background: transparent;
+    max-width: 50%;
     &-holder {
       display: none;
     }

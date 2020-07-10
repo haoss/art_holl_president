@@ -10,7 +10,7 @@ header.header
 
 -var navigation = { 'Главная': '#!', 'Тарифы': '#!', 'Пространство': '#!', 'Схемы': '#!', 'Заказ': '#!', 'Контакты': '#!'};
 
-nav.navigation(role="navigation")
+nav.navigation(role="navigation" data-section="1")
   ul
     each val, key in navigation
       if active === key

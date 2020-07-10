@@ -50,10 +50,13 @@ body {
   font-family: $font-source;
 }
 .h1, h1 {
-  font-size: rem(35px);
+  font-size: rem(30px);
   line-height: 1;
   margin-bottom: 0;
   letter-spacing: 0;
+  @include media-breakpoint-up(sm) {
+    font-size: rem(35px);
+  }
   @include media-breakpoint-up(md) {
     font-size: rem(40px);
   }
@@ -69,10 +72,13 @@ body {
   }
 }
 .h2, h2 {
-  font-size: rem(35px);
+  font-size: rem(30px);
   line-height: 1;
   margin-bottom: 17px;
   letter-spacing: 0;
+  @include media-breakpoint-up(sm) {
+    font-size: rem(35px);
+  }
   @include media-breakpoint-up(md) {
     font-size: rem(40px);
   }
@@ -90,6 +96,12 @@ body {
 .h3, h3 {
   font-size: rem(20px);
   line-height: 1.3;
+  @include media-breakpoint-up(xxl) {
+    font-size: rem(22px);
+  }
+  @include media-breakpoint-up(xxxl) {
+    font-size: rem(24px);
+  }
 }
 .h4, h4 {
   font-size: rem(16px);
@@ -115,10 +127,16 @@ p {
   margin: 0 0 25px 0;
   @include media-breakpoint-up(lg) {
     margin-bottom: 38px;
+    .--seven & {
+      margin-bottom: 10px;
+    }
   }
   @include media-breakpoint-up(xl) {
     line-height: 1.4;
     margin-bottom: 70px;
+    .--five & {
+      margin-bottom: 21px;
+    }
   }
   @include media-breakpoint-up(xxl) {
     line-height: 1.5;

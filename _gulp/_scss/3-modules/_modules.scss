@@ -40,6 +40,9 @@
       text-transform: uppercase;
     }
   }
+  &.--seven {
+    font-size: rem(13px);
+  }
   @include media-breakpoint-up(md) {
     &__content {
       margin-top: 21px;
@@ -173,7 +176,7 @@
       }
     }
     &__btns {
-      display: flex;
+      display: flex !important;
       align-items: center;
       &>div {
         &+div {
@@ -198,7 +201,7 @@
       .btn {
         font-size: rem(16px);
         height: 41px;
-        padding-top: 8px;
+        padding-top: 5px;
       }
       [href*="tel:"] {
         font-size: rem(28px);
@@ -339,13 +342,6 @@
     &::before {
       content: '\e90f';
     }
-    // &:hover {
-    //   &:not(.slick-disabled) {
-    //     &::after {
-    //       right: -5px;
-    //     }
-    //   }
-    // }
   }
   .slick-prev {
     left: 30px;
@@ -424,6 +420,10 @@
     .slick-next {
       right: 140px;
     }
+    &__text {
+      font-size: rem(20px);
+      margin-right: 60px;
+    }
   }
   @include media-breakpoint-up(xxxl) {
     .slick-arrow {
@@ -477,9 +477,8 @@
     }
     ul {
       padding: 0px;
-      column-count: 2;
-      white-space: nowrap;
       column-width: auto;
+      white-space: nowrap;
       column-gap: 50px;
       margin: 0;
       li {
@@ -499,9 +498,9 @@
     }
   }
   &__price {
+    font-size: rem(90px);
     position: relative;
     z-index: 5;
-    font-size: rem(120px);
     font-weight: bold;
     line-height: 1;
     b {
@@ -510,12 +509,29 @@
       display: inline-block;
     }
     small {
+      font-size: rem(21px);
       display: block;
-      font-size: rem(30px);
     }
     .small {
-      font-size: rem(25px);
+      font-size: rem(18px);
       display: inline-block;
+      line-height: 1;
+    }
+  }
+  @include media-breakpoint-up(sm) {
+    &__content {
+      ul {
+        column-count: 2;
+      }
+    }
+    &__price {
+      font-size: rem(120px);
+      small {
+        font-size: rem(30px);
+      }
+      .small {
+        font-size: rem(25px);
+      }
     }
   }
   @include media-breakpoint-up(md) {
@@ -534,6 +550,51 @@
       bottom: 45px;
     }
   }
+  @include media-breakpoint-up(xl) {
+    &__content {
+      font-size: rem(16px);
+      ul {
+        column-count: 2;
+      }
+    }
+    &__price {
+      font-size: rem(150px);
+      small {
+        font-size: rem(40px);
+      }
+      .small {
+        font-size: rem(30px);
+      }
+    }
+  }
+  @include media-breakpoint-up(xxl) {
+    &__content {
+      font-size: rem(18px);
+    }
+    &__price {
+      font-size: rem(170px);
+      small {
+        font-size: rem(50px);
+      }
+      .small {
+        font-size: rem(40px);
+      }
+    }
+  }
+  @include media-breakpoint-up(xxxl) {
+    &__content {
+      font-size: rem(20px);
+    }
+    &__price {
+      font-size: rem(200px);
+      small {
+        font-size: rem(60px);
+      }
+      .small {
+        font-size: rem(60px);
+      }
+    }
+  }
 }
 
 .section-four {
@@ -542,8 +603,8 @@
   color: $add-color;
   font-size: rem(13px);
   &__content {
-    display: flex;
     table {
+      width: 100%;
       td {
         border: 0;
         padding: 0 0 2px 0;
@@ -562,11 +623,11 @@
     }
     &>div {
       &+div {
-        padding-left: 50px;
+        padding-top: 20px;
       }
     }
     .btn {
-      margin-bottom: 49px;
+      margin-bottom: 20px;
     }
   }
   &__img {
@@ -588,9 +649,27 @@
       line-height: 1;
     }
   }
+  @include media-breakpoint-up(sm) {
+    &__content {
+      display: flex;
+      table {
+        width: auto;
+      }
+      &>div {
+        &+div {
+          padding-left: 50px;
+          padding-top: 0;
+        }
+      }
+      .btn {
+        margin-bottom: 49px;
+      }
+    }
+  }
   @include media-breakpoint-up(md) {
     display: flex;
     align-items: center;
+    justify-content: center;
     &__img {
       margin-bottom: 0;
       flex-shrink: 0;
@@ -613,11 +692,14 @@
   @include media-breakpoint-up(lg) {
     display: block;
     height: 100%;
+    padding-right: 60px;
     &__img {
       margin-bottom: 34px;
+      width: 100%;
     }
     &__content {
       display: flex;
+      justify-content: center;
       &>div {
         &+div {
           padding-left: 30px;
@@ -626,6 +708,24 @@
       }
       .btn {
         margin-bottom: 54px;
+      }
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    &__img {
+      img {
+        margin: 0 auto;
+        display: block;
+      }
+    }
+  }
+  @include media-breakpoint-up(xxl) {
+    padding-right: 70px;
+    &__content {
+      .btn {
+        width: 208px;
+        height: 41px;
+        font-size: rem(16px);
       }
     }
   }
@@ -641,9 +741,13 @@
     margin: 0 -10px;
     display: flex;
     flex-wrap: wrap;
+    max-width: 500px;
+  }
+  &__head {
+    max-width: 565px;
   }
   &__block {
-    width: calc(50% - 20px);
+    width: calc(100% - 20px);
     font-size: rem(14px);
     font-weight: 400;
     margin: 0 10px 25px 10px;
@@ -674,10 +778,38 @@
     color: $add-color;
     margin-bottom: 20px;
   }
+  @include media-breakpoint-up(sm) {
+    &__block {
+      width: calc(50% - 20px);
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    padding-right: 60px;
+    height: 100%;
+    overflow-y: auto;
+    &__row {
+      flex-direction: column;
+      max-width: 220px;
+    }
+    &__block {
+      width: calc(100% - 20px);
+      padding-left: 75px;
+    }
+  }
   @include media-breakpoint-up(xl) {
+    padding-left: 60px;
     font-size: rem(15px);
+    &__row {
+      max-width: inherit;
+      flex-direction: row;
+    }
     &__block {
       font-size: rem(14px);
+      width: calc(50% - 20px);
+      padding-left: 84px;
+    }
+    &__content {
+      max-width: 427px;
     }
   }
   @include media-breakpoint-up(xxl) {
@@ -723,10 +855,32 @@
   &__message {
     margin-bottom: 25px;
   }
+  @include media-breakpoint-up(md) {
+    &__checkbox {
+      margin-bottom: 35px;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    height: 100%;
+    padding-left: 50px;
+    padding-right: 60px;
+    display: flex;
+    align-items: center;
+    &__form {
+      width: calc(100% - 35px);
+      .btn {
+        min-width: 166px;
+      }
+    }
+  }
+  // @include media-breakpoint-up(xl) {}
 }
 
 .section-seven {
   background: $color-white;
   color: $add-color;
   min-height: 100px;
+  @include media-breakpoint-up(lg) {
+    height: 100%;
+  }
 }

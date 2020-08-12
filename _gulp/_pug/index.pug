@@ -14,24 +14,36 @@ html(lang="ru")
 
     include ./_include/_header
 
-    main.main
+    main.main#pinContainer
 
       // Section 1
-      section.section.--one
+      section(data-anchor="page-1").section.--one
         .section__top
           .one-carousel.carousel
             div
               .carousel__block
-                img(src="./tmp/section-1-img.png", alt="")
+                picture
+                  source(srcset='./tmp/section-1-img.webp' type='image/webp')
+                  source(srcset='./tmp/section-1-img.png' type='image/png')
+                  img(src='./tmp/section-1-img.png' alt='')
             div
               .carousel__block
-                img(src="./tmp/section-1-img.png", alt="")
+                picture
+                  source(srcset='./tmp/section-1-img.webp' type='image/webp')
+                  source(srcset='./tmp/section-1-img.png' type='image/png')
+                  img(src='./tmp/section-1-img.png' alt='')
             div
               .carousel__block
-                img(src="./tmp/section-1-img.png", alt="")
+                picture
+                  source(srcset='./tmp/section-1-img.webp' type='image/webp')
+                  source(srcset='./tmp/section-1-img.png' type='image/png')
+                  img(src='./tmp/section-1-img.png' alt='')
             div
               .carousel__block
-                img(src="./tmp/section-1-img.png", alt="")
+                picture
+                  source(srcset='./tmp/section-1-img.webp' type='image/webp')
+                  source(srcset='./tmp/section-1-img.png' type='image/png')
+                  img(src='./tmp/section-1-img.png' alt='')
         .section__bottom(data-text="АРТ ХОЛЛ")
           .section__bottom-content
             .hashtag
@@ -40,10 +52,12 @@ html(lang="ru")
               h1 Потрясающее место для проведения выставок
             .section__content.section-one__content
               p Особое пространство в Москве, сочетающее в себе характерные черты лофта, арт-галереи и творческой мастерской. 
-              
+            
+            .d-none.d-xxl-block
+              .clear85
             .section__btns
               div
-                a(href="#!").btn
+                a(href="#page-6").btn
                   span Забронировать арт холл
               div.d-none.d-md-block.d-lg-none.d-xl-block
                 .section__btns-small или 
@@ -56,9 +70,13 @@ html(lang="ru")
                     b 987 654 321
 
       // Section 2
-      section.section.--two
+      section(data-anchor="page-2").section.--two
         .section__top
-          .section-two(style="background-image: url('./tmp/section-2-img.png');")
+          .section-two
+            picture
+              source(srcset='./tmp/section-2-img.webp' type='image/webp')
+              source(srcset='./tmp/section-2-img.png' type='image/png')
+              img(src='./tmp/section-2-img.png' alt='')
             .section-two__content
               h3 В стоимость включено:
               ul
@@ -93,9 +111,11 @@ html(lang="ru")
                 | 30 дней - 
                 b 90 000 руб
 
-            .section__btns.d-none
+            .d-none.d-xxl-block
+              .clear85
+            .section__btns.d-none.d-lg-block
               div
-                a(href="#!").btn
+                a(href="#page-6").btn
                   span Забронировать арт холл
               div.d-none.d-md-block.d-lg-none.d-xl-block
                 .section__btns-small или 
@@ -108,23 +128,35 @@ html(lang="ru")
                     b 987 654 321
 
       // Section 3
-      section.section.--three
+      section(data-anchor="page-3").section.--three
         .section__top
           .one-carousel.carousel
             div
               .carousel__block
-                img(src="./tmp/section-1-img.png", alt="")
+                picture
+                  source(srcset='./tmp/section-1-img.webp' type='image/webp')
+                  source(srcset='./tmp/section-1-img.png' type='image/png')
+                  img(src='./tmp/section-1-img.png' alt='')
                 .carousel__text Каждая новая выставка, проходящая на территории Арт  Холл – отражение современности и актуальности искусства.
             div
               .carousel__block
-                img(src="./tmp/section-1-img.png", alt="")
+                picture
+                  source(srcset='./tmp/section-1-img.webp' type='image/webp')
+                  source(srcset='./tmp/section-1-img.png' type='image/png')
+                  img(src='./tmp/section-1-img.png' alt='')
             div
               .carousel__block
-                img(src="./tmp/section-1-img.png", alt="")
+                picture
+                  source(srcset='./tmp/section-1-img.webp' type='image/webp')
+                  source(srcset='./tmp/section-1-img.png' type='image/png')
+                  img(src='./tmp/section-1-img.png' alt='')
                 .carousel__text Каждая новая выставка, проходящая на территории Арт  Холл – отражение современности и актуальности искусства.
             div
               .carousel__block
-                img(src="./tmp/section-1-img.png", alt="")
+                picture
+                  source(srcset='./tmp/section-1-img.webp' type='image/webp')
+                  source(srcset='./tmp/section-1-img.png' type='image/png')
+                  img(src='./tmp/section-1-img.png' alt='')
         .section__bottom(data-text="размещение")
           .section__bottom-content
             .hashtag
@@ -133,9 +165,11 @@ html(lang="ru")
             .section__head
               .h1 Индивидуальный выбор трансформации помещения
 
-            .section__btns.d-none
+            .d-none.d-xxl-block
+              .clear85
+            .section__btns.d-none.d-lg-block
               div
-                a(href="#!").btn
+                a(href="#page-6").btn
                   span Забронировать арт холл
               div.d-none.d-md-block.d-lg-none.d-xl-block
                 .section__btns-small или 
@@ -148,11 +182,14 @@ html(lang="ru")
                     b 987 654 321
 
       // Section 4
-      section.section.--four
+      section(data-anchor="page-4").section.--four
         .section__top
           .section-four
             .section-four__img
-              img(src="./tmp/section-4-img.png", alt="")
+              picture
+                source(srcset='./tmp/section-4-img.webp' type='image/webp')
+                source(srcset='./tmp/section-4-img.png' type='image/png')
+                img(src='./tmp/section-4-img.png' alt='')
             .section-four__wrapper
               .section-four__content
                 div
@@ -200,9 +237,11 @@ html(lang="ru")
             .section__head
               .h1 Уникальный формат возможностей помещения
 
-            .section__btns.d-none
+            .d-none.d-xxl-block
+              .clear85
+            .section__btns.d-none.d-lg-block
               div
-                a(href="#!").btn
+                a(href="#page-6").btn
                   span Забронировать арт холл
               div.d-none.d-md-block.d-lg-none.d-xl-block
                 .section__btns-small или 
@@ -215,7 +254,7 @@ html(lang="ru")
                     b 987 654 321
 
       // Section 5
-      section.section.--five
+      section(data-anchor="page-5").section.--five
         .section__top
           .section-five
             .section-five__head
@@ -249,9 +288,11 @@ html(lang="ru")
             .section__head
               .h1 Уникальный формат оснащения помещения
             
-            .section__btns.d-none
+            .d-none.d-xxl-block
+              .clear85
+            .section__btns.d-none.d-lg-block
               div
-                a(href="#!").btn
+                a(href="#page-6").btn
                   span Забронировать арт холл
               div.d-none.d-md-block.d-lg-none.d-xl-block
                 .section__btns-small или 
@@ -264,9 +305,13 @@ html(lang="ru")
                     b 987 654 321
 
       // Section 6
-      section.section.--six
+      section(data-anchor="page-6").section.--six
         .section__top
-          .section-six(style="background-image: url('./tmp/section-6-img.png');")
+          .section-six
+            picture
+              source(srcset='./tmp/section-6-img.webp' type='image/webp')
+              source(srcset='./tmp/section-6-img.png' type='image/png')
+              img(src='./tmp/section-6-img.png' alt='')
             form(action="").section-six__form
               legend Форма бронирования
               fieldset
@@ -341,7 +386,7 @@ html(lang="ru")
                       checked: true,
                     }
                   })
-                button(type="submit").btn забронировать
+                button(type="button").btn забронировать
         .section__bottom(data-text="бронирование")
           .section__bottom-content
             .hashtag
@@ -350,7 +395,9 @@ html(lang="ru")
             .section__head
               .h1 Индивидуальный подход к вашей трансформации мероприятия
             
-            .section__btns.d-none
+            .d-none.d-xxl-block
+              .clear85
+            .section__btns.d-none.d-lg-block
               div
                 a(href="#!").btn
                   span Забронировать арт холл
@@ -365,9 +412,17 @@ html(lang="ru")
                     b 987 654 321
 
       // Section 7
-      section.section.--seven
+      section(data-anchor="page-7").section.--seven
         .section__top
           .section-seven
+            .contacts__map
+              #map
+              .contacts__address
+                .contacts__address-title Москва, ул. Арбат, д. 54/2, строение 1
+                .contacts__address-phone
+                  a(href="tel:") 8 926 557 51 85
+                .contacts__address-mail
+                  a(href="mail:") info@site-name.ru
         .section__bottom(data-text="НАВИГАЦИЯ")
           .section__bottom-content
             .hashtag
@@ -383,15 +438,29 @@ html(lang="ru")
               h4 АВТОБУС
               p Проезд до станции метро «Юго-Западная». Городские автобусы № 611, 911.
 
-            .section__btns.d-none
+            .section__btns.d-none.d-md-block
               div
-                a(href="#!").btn
+                a(href="#page-6").btn
                   span Забронировать арт холл
 
     include ./_include/_footer
-    div(style="height: 1000px; background-color: #fff")
+    //- div(style="height: 1000px; background-color: #fff")
 
     // Load Scripts
     include ./_include/_footer-js
     script(src="./js/common.js")
 
+    link(rel='stylesheet' href='./js/libs/leaflet/leaflet.css')
+    script(src='./js/libs/leaflet/leaflet.js')
+    script.
+      var map = L.map('map', {
+        center: [55.747112,37.5808753], 
+        zoom: 15,
+        dragging: false
+      });
+      L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+          '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+          'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        id: 'mapbox.streets'
+      }).addTo(map);

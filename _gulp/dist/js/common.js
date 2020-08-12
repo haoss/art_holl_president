@@ -66,6 +66,7 @@ $(document).on('ready', function(){
 
   mobileNav();
   inputFocus();
+  scrollAnimation();
 
   // Chrome Smooth Scroll
   try {
@@ -90,7 +91,7 @@ $(window).on('resize', function() {
   var nav = $('.navigation');
 
   if (width >= 970) {
-    _this.removeClass('is-active');
+    btn.removeClass('is-active');
     nav.removeClass('is-active');
     body.removeClass('is-fixed');
   }
@@ -112,6 +113,14 @@ function mobileNav() {
       nav.addClass('is-active');
       body.addClass('is-fixed');
     }
+  });
+
+  $('.navigation li a').on('click', function(){
+    $('.navigation li a').removeClass('active');
+    btn.removeClass('is-active');
+    nav.removeClass('is-active');
+    body.removeClass('is-fixed');
+    $(this).addClass('active');
   });
 }
 
@@ -146,4 +155,60 @@ function inputFocus(){
       }
     });
   })
+}
+
+function scrollAnimation() {
+  var width = $(window).width();
+  
+  const pages = new Pageable("#pinContainer", {
+    pips: true, // display the pips
+    animation: 300, // the duration in ms of the scroll animation
+    delay: 0, // the delay in ms before the scroll animation starts
+    throttle: 50, // the interval in ms that the resize callback is fired
+    orientation: "vertical", // or horizontal
+    swipeThreshold: 50, // swipe / mouse drag distance (px) before firing the page change event
+    freeScroll: false, // allow manual scrolling when dragging instead of automatically moving to next page
+    navPrevEl: false, // define an element to use to scroll to the previous page (CSS3 selector string or Element reference)
+    navNextEl: false, // define an element to use to scroll to the next page (CSS3 selector string or Element reference)
+    infinite: false, // enable infinite scrolling (from 0.4.0)
+    events: {
+        wheel: true, // enable / disable mousewheel scrolling
+        mouse: false, // enable / disable mouse drag scrolling
+        touch: false, // enable / disable touch / swipe scrolling
+        keydown: true, // enable / disable keyboard navigation
+    },
+    easing: function(currentTime, startPos, endPos, interval) {
+        // the easing function used for the scroll animation
+        return -endPos * (currentTime /= interval) * (currentTime - 2) + startPos;
+    },
+    onInit: function(data) {
+      $('.navigation').attr('data-section', data.index + 1);
+      $('.navigation li a').removeClass('active');
+      $('.navigation li a[href="#page-' + (data.index + 1) + '"]').addClass('active');
+      console.log(data.index + 1);
+    },
+    onUpdate: function(data) {
+      
+    },    
+    onBeforeStart: function(data) {
+    },
+    onStart: function(data) {
+      
+    },
+    onScroll: function(data) {
+      
+    },
+    onFinish: function(data) {
+      $('.navigation').attr('data-section', data.index + 1);
+      $('.navigation li a').removeClass('active');
+      $('.navigation li a[href="#page-' + (data.index + 1) + '"]').addClass('active');
+      console.log(data.index + 1);
+    },
+  });
+
+  if (width <= 970) {
+    pages.destroy();
+  } else {
+    pages.init();
+  }
 }

@@ -8,14 +8,14 @@ header.header
       span меню сайта
       i
 
--var navigation = { 'Главная': '#!', 'Тарифы': '#!', 'Пространство': '#!', 'Схемы': '#!', 'Заказ': '#!', 'Контакты': '#!'};
+-var navigation = { 'Главная': '#page-1', 'Тарифы': '#page-2', 'Пространство': '#page-3', 'Схемы': '#page-4', 'Заказ': '#page-6', 'Контакты': '#page-7'};
 
-nav.navigation(role="navigation" data-section="1")
+nav.navigation.anchors(role="navigation" data-section="1")
   ul
     each val, key in navigation
       if active === key
-        li.active
-          a(href=val, title=key)= key
+        li
+          a.active(href=val, title=key)= key
       else
         li
           a(href=val, title=key)= key
@@ -25,7 +25,7 @@ nav.navigation(role="navigation" data-section="1")
       span 0 800 
         b 987 654 321
   .navigation__footer
-    button(type="button").btn.navigation__btn
+    a(href="#page-6").btn.btn.navigation__btn
       span Забронировать арт холл
     .social
       span.span Мы в сети

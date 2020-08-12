@@ -11,7 +11,6 @@
         <meta name="format-detection" content="address=no">
         <meta name="format-detection" content="email=no">
         <meta content="notranslate" name="google">
-        <link rel="stylesheet" href="https://i.icomoon.io/public/temp/d8a47c4aee/art_holl_president/style.css">
         <link rel="stylesheet" href="./css/style.min.css">
     </head>
     <body>
@@ -23,38 +22,57 @@
                 <button class="header__btn" type="button"><span>меню сайта</span><i></i></button>
             </div>
         </header>
-        <nav class="navigation" role="navigation" data-section="1">
+        <nav class="navigation anchors" role="navigation" data-section="1">
             <ul>
-                <li class="active"><a href="#!" title="Главная">Главная</a></li>
-                <li><a href="#!" title="Тарифы">Тарифы</a></li>
-                <li><a href="#!" title="Пространство">Пространство</a></li>
-                <li><a href="#!" title="Схемы">Схемы</a></li>
-                <li><a href="#!" title="Заказ">Заказ</a></li>
-                <li><a href="#!" title="Контакты">Контакты</a></li>
+                <li><a class="active" href="#page-1" title="Главная">Главная</a></li>
+                <li><a href="#page-2" title="Тарифы">Тарифы</a></li>
+                <li><a href="#page-3" title="Пространство">Пространство</a></li>
+                <li><a href="#page-4" title="Схемы">Схемы</a></li>
+                <li><a href="#page-6" title="Заказ">Заказ</a></li>
+                <li><a href="#page-7" title="Контакты">Контакты</a></li>
             </ul>
             <div class="navigation__phone"><a href="tel:"><i class="icon-call-border"></i><span>0 800 <b>987 654 321</b></span></a></div>
-            <div class="navigation__footer">
-                <button class="btn navigation__btn" type="button"><span>Забронировать арт холл</span></button>
+            <div class="navigation__footer"><a class="btn btn navigation__btn" href="#page-6"><span>Забронировать арт холл</span></a>
                 <div class="social"><span class="span">Мы в сети</span><a href="#!" target="_blank"><i class="icon-facebook"></i></a><a href="#!" target="_blank"><i class="icon-twitter"></i></a><a href="#!" target="_blank"><i class="icon-vkontakte"></i></a></div>
             </div>
         </nav>
         <div class="header-holder"></div>
-        <main class="main">
+        <main class="main" id="pinContainer">
             <!-- Section 1-->
-            <section class="section --one">
+            <section class="section --one" data-anchor="page-1">
                 <div class="section__top">
                     <div class="one-carousel carousel">
                         <div>
-                            <div class="carousel__block"><img src="./tmp/section-1-img.png" alt=""></div>
+                            <div class="carousel__block">
+                                <picture>
+                                    <source srcset="./tmp/section-1-img.webp" type="image/webp">
+                                    <source srcset="./tmp/section-1-img.png" type="image/png"><img src="./tmp/section-1-img.png" alt="">
+                                </picture>
+                            </div>
                         </div>
                         <div>
-                            <div class="carousel__block"><img src="./tmp/section-1-img.png" alt=""></div>
+                            <div class="carousel__block">
+                                <picture>
+                                    <source srcset="./tmp/section-1-img.webp" type="image/webp">
+                                    <source srcset="./tmp/section-1-img.png" type="image/png"><img src="./tmp/section-1-img.png" alt="">
+                                </picture>
+                            </div>
                         </div>
                         <div>
-                            <div class="carousel__block"><img src="./tmp/section-1-img.png" alt=""></div>
+                            <div class="carousel__block">
+                                <picture>
+                                    <source srcset="./tmp/section-1-img.webp" type="image/webp">
+                                    <source srcset="./tmp/section-1-img.png" type="image/png"><img src="./tmp/section-1-img.png" alt="">
+                                </picture>
+                            </div>
                         </div>
                         <div>
-                            <div class="carousel__block"><img src="./tmp/section-1-img.png" alt=""></div>
+                            <div class="carousel__block">
+                                <picture>
+                                    <source srcset="./tmp/section-1-img.webp" type="image/webp">
+                                    <source srcset="./tmp/section-1-img.png" type="image/png"><img src="./tmp/section-1-img.png" alt="">
+                                </picture>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -67,8 +85,11 @@
                         <div class="section__content section-one__content">
                             <p>Особое пространство в Москве, сочетающее в себе характерные черты лофта, арт-галереи и творческой мастерской. </p>
                         </div>
+                        <div class="d-none d-xxl-block">
+                            <div class="clear85"></div>
+                        </div>
                         <div class="section__btns">
-                            <div><a class="btn" href="#!"><span>Забронировать арт холл</span></a></div>
+                            <div><a class="btn" href="#page-6"><span>Забронировать арт холл</span></a></div>
                             <div class="d-none d-md-block d-lg-none d-xl-block">
                                 <div class="section__btns-small">или <br>звоните</div>
                             </div>
@@ -78,9 +99,13 @@
                 </div>
             </section>
             <!-- Section 2-->
-            <section class="section --two">
+            <section class="section --two" data-anchor="page-2">
                 <div class="section__top">
-                    <div class="section-two" style="background-image: url('./tmp/section-2-img.png');">
+                    <div class="section-two">
+                        <picture>
+                            <source srcset="./tmp/section-2-img.webp" type="image/webp">
+                            <source srcset="./tmp/section-2-img.png" type="image/png"><img src="./tmp/section-2-img.png" alt="">
+                        </picture>
                         <div class="section-two__content">
                             <h3>В стоимость включено:</h3>
                             <ul>
@@ -110,8 +135,11 @@
                         <div class="section__content">
                             <p>Цены на услуги за проведение выставочного проекта:<br>14 дней - <b>50 000 руб</b><br>30 дней - <b>90 000 руб</b></p>
                         </div>
-                        <div class="section__btns d-none">
-                            <div><a class="btn" href="#!"><span>Забронировать арт холл</span></a></div>
+                        <div class="d-none d-xxl-block">
+                            <div class="clear85"></div>
+                        </div>
+                        <div class="section__btns d-none d-lg-block">
+                            <div><a class="btn" href="#page-6"><span>Забронировать арт холл</span></a></div>
                             <div class="d-none d-md-block d-lg-none d-xl-block">
                                 <div class="section__btns-small">или <br>звоните</div>
                             </div>
@@ -121,24 +149,42 @@
                 </div>
             </section>
             <!-- Section 3-->
-            <section class="section --three">
+            <section class="section --three" data-anchor="page-3">
                 <div class="section__top">
                     <div class="one-carousel carousel">
                         <div>
-                            <div class="carousel__block"><img src="./tmp/section-1-img.png" alt="">
+                            <div class="carousel__block">
+                                <picture>
+                                    <source srcset="./tmp/section-1-img.webp" type="image/webp">
+                                    <source srcset="./tmp/section-1-img.png" type="image/png"><img src="./tmp/section-1-img.png" alt="">
+                                </picture>
                                 <div class="carousel__text">Каждая новая выставка, проходящая на территории Арт  Холл – отражение современности и актуальности искусства.</div>
                             </div>
                         </div>
                         <div>
-                            <div class="carousel__block"><img src="./tmp/section-1-img.png" alt=""></div>
+                            <div class="carousel__block">
+                                <picture>
+                                    <source srcset="./tmp/section-1-img.webp" type="image/webp">
+                                    <source srcset="./tmp/section-1-img.png" type="image/png"><img src="./tmp/section-1-img.png" alt="">
+                                </picture>
+                            </div>
                         </div>
                         <div>
-                            <div class="carousel__block"><img src="./tmp/section-1-img.png" alt="">
+                            <div class="carousel__block">
+                                <picture>
+                                    <source srcset="./tmp/section-1-img.webp" type="image/webp">
+                                    <source srcset="./tmp/section-1-img.png" type="image/png"><img src="./tmp/section-1-img.png" alt="">
+                                </picture>
                                 <div class="carousel__text">Каждая новая выставка, проходящая на территории Арт  Холл – отражение современности и актуальности искусства.</div>
                             </div>
                         </div>
                         <div>
-                            <div class="carousel__block"><img src="./tmp/section-1-img.png" alt=""></div>
+                            <div class="carousel__block">
+                                <picture>
+                                    <source srcset="./tmp/section-1-img.webp" type="image/webp">
+                                    <source srcset="./tmp/section-1-img.png" type="image/png"><img src="./tmp/section-1-img.png" alt="">
+                                </picture>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -148,8 +194,11 @@
                         <div class="section__head">
                             <div class="h1">Индивидуальный выбор трансформации помещения</div>
                         </div>
-                        <div class="section__btns d-none">
-                            <div><a class="btn" href="#!"><span>Забронировать арт холл</span></a></div>
+                        <div class="d-none d-xxl-block">
+                            <div class="clear85"></div>
+                        </div>
+                        <div class="section__btns d-none d-lg-block">
+                            <div><a class="btn" href="#page-6"><span>Забронировать арт холл</span></a></div>
                             <div class="d-none d-md-block d-lg-none d-xl-block">
                                 <div class="section__btns-small">или <br>звоните</div>
                             </div>
@@ -159,10 +208,15 @@
                 </div>
             </section>
             <!-- Section 4-->
-            <section class="section --four">
+            <section class="section --four" data-anchor="page-4">
                 <div class="section__top">
                     <div class="section-four">
-                        <div class="section-four__img"><img src="./tmp/section-4-img.png" alt=""></div>
+                        <div class="section-four__img">
+                            <picture>
+                                <source srcset="./tmp/section-4-img.webp" type="image/webp">
+                                <source srcset="./tmp/section-4-img.png" type="image/png"><img src="./tmp/section-4-img.png" alt="">
+                            </picture>
+                        </div>
                         <div class="section-four__wrapper">
                             <div class="section-four__content">
                                 <div>
@@ -221,8 +275,11 @@
                         <div class="section__head">
                             <div class="h1">Уникальный формат возможностей помещения</div>
                         </div>
-                        <div class="section__btns d-none">
-                            <div><a class="btn" href="#!"><span>Забронировать арт холл</span></a></div>
+                        <div class="d-none d-xxl-block">
+                            <div class="clear85"></div>
+                        </div>
+                        <div class="section__btns d-none d-lg-block">
+                            <div><a class="btn" href="#page-6"><span>Забронировать арт холл</span></a></div>
                             <div class="d-none d-md-block d-lg-none d-xl-block">
                                 <div class="section__btns-small">или <br>звоните</div>
                             </div>
@@ -232,7 +289,7 @@
                 </div>
             </section>
             <!-- Section 5-->
-            <section class="section --five">
+            <section class="section --five" data-anchor="page-5">
                 <div class="section__top">
                     <div class="section-five">
                         <div class="section-five__head">
@@ -267,8 +324,11 @@
                         <div class="section__head">
                             <div class="h1">Уникальный формат оснащения помещения</div>
                         </div>
-                        <div class="section__btns d-none">
-                            <div><a class="btn" href="#!"><span>Забронировать арт холл</span></a></div>
+                        <div class="d-none d-xxl-block">
+                            <div class="clear85"></div>
+                        </div>
+                        <div class="section__btns d-none d-lg-block">
+                            <div><a class="btn" href="#page-6"><span>Забронировать арт холл</span></a></div>
                             <div class="d-none d-md-block d-lg-none d-xl-block">
                                 <div class="section__btns-small">или <br>звоните</div>
                             </div>
@@ -278,9 +338,13 @@
                 </div>
             </section>
             <!-- Section 6-->
-            <section class="section --six">
+            <section class="section --six" data-anchor="page-6">
                 <div class="section__top">
-                    <div class="section-six" style="background-image: url('./tmp/section-6-img.png');">
+                    <div class="section-six">
+                        <picture>
+                            <source srcset="./tmp/section-6-img.webp" type="image/webp">
+                            <source srcset="./tmp/section-6-img.png" type="image/png"><img src="./tmp/section-6-img.png" alt="">
+                        </picture>
                         <form class="section-six__form" action="">
                             <legend>Форма бронирования</legend>
                             <fieldset>
@@ -309,7 +373,7 @@
                                             <input class="field-checkbox__input" type="checkbox" name="input-checkbox" checked><span class="field-checkbox__span-input"></span><span class="field-checkbox__label">Даю свое соглагасие на обработку персональных данных. Соглашаюсь с правилами <a href="#!" target="_blank">пользовательского соглашения</a> об использовании персональных данных.</span>
                                         </label>
                                 </div>
-                                <button class="btn" type="submit">забронировать</button>
+                                <button class="btn" type="button">забронировать</button>
                             </fieldset>
                         </form>
                     </div>
@@ -320,7 +384,10 @@
                         <div class="section__head">
                             <div class="h1">Индивидуальный подход к вашей трансформации мероприятия</div>
                         </div>
-                        <div class="section__btns d-none">
+                        <div class="d-none d-xxl-block">
+                            <div class="clear85"></div>
+                        </div>
+                        <div class="section__btns d-none d-lg-block">
                             <div><a class="btn" href="#!"><span>Забронировать арт холл</span></a></div>
                             <div class="d-none d-md-block d-lg-none d-xl-block">
                                 <div class="section__btns-small">или <br>звоните</div>
@@ -331,9 +398,18 @@
                 </div>
             </section>
             <!-- Section 7-->
-            <section class="section --seven">
+            <section class="section --seven" data-anchor="page-7">
                 <div class="section__top">
-                    <div class="section-seven"></div>
+                    <div class="section-seven">
+                        <div class="contacts__map">
+                            <div id="map"></div>
+                            <div class="contacts__address">
+                                <div class="contacts__address-title">Москва, ул. Арбат, д. 54/2, строение 1</div>
+                                <div class="contacts__address-phone"><a href="tel:">8 926 557 51 85</a></div>
+                                <div class="contacts__address-mail"><a href="mail:">info@site-name.ru</a></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="section__bottom" data-text="НАВИГАЦИЯ">
                     <div class="section__bottom-content">
@@ -349,8 +425,8 @@
                             <h4>АВТОБУС</h4>
                             <p>Проезд до станции метро «Юго-Западная». Городские автобусы № 611, 911.</p>
                         </div>
-                        <div class="section__btns d-none">
-                            <div><a class="btn" href="#!"><span>Забронировать арт холл</span></a></div>
+                        <div class="section__btns d-none d-md-block">
+                            <div><a class="btn" href="#page-6"><span>Забронировать арт холл</span></a></div>
                         </div>
                     </div>
                 </div>
@@ -360,13 +436,28 @@
         <footer class="footer">   
             <div class="social"><span class="span">Мы в сети</span><a href="#!" target="_blank"><i class="icon-facebook"></i></a><a href="#!" target="_blank"><i class="icon-twitter"></i></a><a href="#!" target="_blank"><i class="icon-vkontakte"></i></a></div>
         </footer>
-        <div style="height: 1000px; background-color: #fff"></div>
         <!-- Load Scripts-->
         <!-- Footer js-->
-        <script src="./js/libs/jquery/jquery-3.3.1.min.js"></script>
-        <script src="./js/libs/jquery/jquery-migrate-3.0.1.min.js"></script>
+        <script src="./js/libs/jquery/jquery.min.js"></script>
+        <script src="./js/libs/jquery/jquery-migrate.min.js"></script>
         <script src="./js/libs/magnific-popup/jquery.magnific-popup.min.js"></script>
         <script src="./js/libs/slick/slick.min.js"></script>
+        <script src="./js/libs/pageable/pageable.min.js"></script>
         <script src="./js/common.js"></script>
+        <link rel="stylesheet" href="./js/libs/leaflet/leaflet.css">
+        <script src="./js/libs/leaflet/leaflet.js"></script>
+        <script>
+            var map = L.map('map', {
+              center: [55.747112,37.5808753], 
+              zoom: 15,
+              dragging: false
+            });
+            L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+              attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+                '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+                'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+              id: 'mapbox.streets'
+            }).addTo(map);
+        </script>
     </body>
 </html>

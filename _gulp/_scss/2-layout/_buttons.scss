@@ -23,6 +23,7 @@ button {
   font-weight: bold;
   text-decoration: none;
   box-shadow: 0px 0px 0px rgba($color-white,.25);
+  text-align: center;
   &::before {
     position: absolute;
     content: '';
@@ -54,5 +55,8 @@ button {
       color: $color-white;
       box-shadow: 0px 6px 15px rgba($add-color,.25);
     }
+  }
+  @include media-breakpoint-up(md) {
+    min-width: 166px;
   }
 }

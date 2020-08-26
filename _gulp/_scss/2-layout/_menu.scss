@@ -145,9 +145,7 @@
             color: $add-color;
             background: rgba($color-white, .5);
             box-shadow: 0px 1px 0px $color-white;
-          }
-          &.active {
-            &>a,&>span {
+            &.active {
               background: rgba(#09274F,.5);
               color: $color-white;
             }

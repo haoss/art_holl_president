@@ -101,6 +101,7 @@ function mobileNav() {
   var btn = $('.header__btn');
   var body = $('body');
   var nav = $('.navigation');
+  var mobileBtn = $('.j-close-navigation');
 
   btn.on('click', function(){
     var _this = $(this);
@@ -112,6 +113,14 @@ function mobileNav() {
       _this.addClass('is-active');
       nav.addClass('is-active');
       body.addClass('is-fixed');
+    }
+  });
+
+  mobileBtn.on('click', function(){
+    if (btn.hasClass('is-active')) {
+      btn.removeClass('is-active');
+      nav.removeClass('is-active');
+      body.removeClass('is-fixed');
     }
   });
 
